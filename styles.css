@@ -7,10 +7,25 @@
 }
 
 body {
+    /* background: url('landing_page.png')no-repeat;
+    background-position: center; 
+    background-size: cover;  */
     color: white; 
     font-family: "DM Sans", serif;
-    background-color: #3d0066;
+    background: linear-gradient(136deg, #000000, #000000, #bc00f7, #8410a9, #ff0079);
+    background-size: 1000% 1000%;
+
+    -webkit-animation: background 30s ease infinite;
+    -moz-animation: background 30s ease infinite;
+    animation: background 30s ease infinite;
 }
+#particles-js{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 header {
     font-size: 35px;
     background-color: rgba(255,255,255,0.5);
@@ -18,6 +33,7 @@ header {
     display: block;
     padding: 20px;
 }
+
 header ul{
     list-style-type: none;
     display: flex;
@@ -67,13 +83,11 @@ hr {
 }
 
 .skill {
+    background-color: rgba(255,255,255,0.5);
     font-size: 45px;
-    margin-top: 100px;
+    margin-top: 20px;
     padding-left: 100px;
     padding-bottom: 300px;
-}
-.skill h2 {
-    color: #fff;
 }
 .skill h4 {
     font-size: 1.4rem;
@@ -83,6 +97,10 @@ hr {
 .lists ul {
     font-size: 25px;
 }
+::marker {
+    margin: 0;
+    font-size: 20px;
+}
 
 .grid-container {
     display: grid;
@@ -90,7 +108,7 @@ hr {
 }
 
 footer {
-    background-color: rgb(147, 95, 167);
+    background-color: rgba(255,255,255,0.5);
     backdrop-filter: blur(2px);
     padding: 30px;
     text-align: center;
@@ -118,55 +136,18 @@ footer p {
     font-size: 1.2rem;
 }
 
-
-@media only screen and (max-width: 600px) {
-header {
-    font-size: 15px;
-    padding: 10px;
+@-webkit-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-header li {
-    margin: 0px 30px;
+@-moz-keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
-header li a {
-    font-size: 18px;
-}
-
-section {
-    padding: 10px;
-    padding-left: 30px;
-    padding-bottom: 100px;
-}
-
-.content h2 {
-    font-size:25px;
-    margin-top: 50px;
-}
-.content p {
-    font-size: 12px;
-    width: 23rem;
-}
-.skill {
-    font-size: 45px;
-    margin-top: 100px;
-    padding-left: 100px;
-    padding-bottom: 300px;
-}
-.skill h2 {
-    color: #fff;
-    font-size: 30px;
-}
-.skill h4 {
-    font-size: 1.4rem;
-    color: #ff66c4;
-}
-
-.lists ul {
-    font-size: 25px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 24% 25% 20% 15% 20%;
-}
-
+@keyframes background {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
