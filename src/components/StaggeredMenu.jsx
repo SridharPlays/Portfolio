@@ -348,7 +348,9 @@ export const StaggeredMenu = ({
           aria-label="Main navigation header">
           <div
             className="sm-logo flex items-center select-none pointer-events-auto relative group"
-            aria-label="Logo">
+            aria-label="Logo" onClick={() => {
+              window.location.href = "/"
+            }}>
             <span className="text-2xl font-bold" style={{ color: open && changeMenuColorOnOpen ? openMenuButtonColor : menuButtonColor }}>Sridhar</span>
             <span className='absolute -bottom-5 right-0 opacity-0 md:group-hover:opacity-100 duration-200'>That's Me :)</span>
           </div>

@@ -5,14 +5,16 @@ import StaggeredMenu from "./components/StaggeredMenu";
 
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
-import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
+import ProjectPage from "./pages/ProjectPage";
+import ExperiencePage from "./pages/ExperiencePage";
 
 const menuItems = [
   { label: "Home", ariaLabel: "Go to home page", link: "/" },
   { label: "About", ariaLabel: "Learn about us", link: "/about" },
-  { label: "Services", ariaLabel: "View our services", link: "/services" },
+  { label: "Project", ariaLabel: "View my projects", link: "/projects" },
   { label: "Contact", ariaLabel: "Get in touch", link: "/contact" },
+  { label: "Journey", ariaLabel: "View my experience", link: "/experience" },
 ];
 
 const socialItems = [
@@ -97,12 +99,12 @@ function App() {
 
   return (
     <main
-      className="bg-[#fefefe] font-[Lexend] text-slate-800 overflow-hidden cursor-none"
+      className="bg-[#fefefe] font-[Lexend] text-slate-800 overflow-hidden cursor-none selection:bg-emerald-300/40"
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-black pointer-events-none z-50 flex items-center justify-center"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border-2 border-black pointer-events-none z-50 hidden md:flex items-center justify-center"
         variants={cursorVariants}
         animate={isClicked ? "clicked" : isHovered ? "hovered" : "default"}
         transition={{ type: "spring", stiffness: 500, damping: 28 }}
@@ -131,8 +133,10 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/services" element={<ServicesPage />} />
+        <Route path="/projects" element={<ProjectPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="*" element={<HomePage />} />
       </Routes>
     </main>
   );
